@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Simulacro PP Labo</title>
+</head>
+<body>
+    <div class="header">
+        <div class="headerImage">
+            <a href="index.html">
+                <img src="Logo.png" alt="Logo">
+            </a>
+        </div>
+
+        <ul class="list">
+            <li><a href="">Nosotros</a></li>
+            <li><a href="advertisements.html">Anuncios</a></li>
+            <li><a href="">Blog</a></li>
+            <li><a href="">Contacto</a></li>
+        </ul>
+    </div>
+
+    <p class="title">Administración</p>
+
+    <div class="banner">
+        <img src="autos.jpg" alt="banner">
+    </div>
+
+    <form id="advertisementForm">
+        <div class="borderDiv">
+            <p>Información Del Anuncio</p>
+
+            <div>
+                <label for="title">Titulo:</label><br>
+                <input type="text" id="title" name="title" placeholder="Título" required><br>
+            </div>
+
+            <div>
+                <label>Transacción:</label><br>
+                <input type="radio" id="venta" name="transactionType" value="venta" required>
+                <label for="venta">Venta</label><br>
+                <input type="radio" id="alquiler" name="transactionType" value="alquiler">
+                <label for="alquiler">Alquiler</label><br>
+            </div>
+
+            <div>
+                <label for="description">Descripción:</label><br>
+                <textarea id="description" name="description" placeholder="Descripción" rows="4" required></textarea>
+            </div>
+
+            <div>
+                <label for="price">Precio:</label><br>
+                <input type="text" id="price" name="price" placeholder="Precio" required onkeydown="javascript: return event.keyCode == 69 ? false : true"><br>
+            </div>
+
+            <div class="car-info">
+                <div>
+                    <img src="car-door.png" class="input-icon">
+                    <input type="number" id="numDoors" name="numDoors" min="2" placeholder="Puertas" required onkeydown="javascript: return event.keyCode == 69 ? false : true"><br>
+                </div>
+
+                <div>
+                    <img src="km.png" class="input-icon">
+                    <input type="number" id="numKM" name="numKM" min="0" placeholder="KMs" required onkeydown="javascript: return event.keyCode == 69 ? false : true"><br>
+                </div>
+
+                <div>
+                    <img src="engine.png" class="input-icon">
+                    <input type="number" id="numPotencia" name="numPotencia" min="1" placeholder="Potencia" required onkeydown="javascript: return event.keyCode == 69 ? false : true"><br>
+                </div>
+            </div>
+        </div>
+
+        <input type="submit" value="Guardar" id="submit-button"></input>
+    </form>
+
+    <div class="anuncios">
+
+        <div class="controls hidden">
+            <button type="button" id="modifyButton">Modificar</button>
+            <button type="button" id="deleteButton">Eliminar</button>
+            <button type="button" id="cancelButton">Cancelar</button>
+        </div>
+
+        <table id="advertisementsTable">
+            <thead>
+                <tr>
+                    <th>título</th>
+                    <th>transaccion</th>
+                    <th>descripción</th>
+                    <th>precio</th>
+                    <th>num_puretas</th>
+                    <th>num_KMs</th>
+                    <th>Potencia</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+
+    <div id="loadingSpinner" class="hidden">
+        <img src="Wheel.gif" alt="Loading...">
+    </div>
+
+    <div class="footer">
+        <ul class="list">
+            <li><a href="">Nosotros</a></li>
+            <li><a href="">Anuncios</a></li>
+            <li><a href="">Blog</a></li>
+            <li><a href="">Contacto</a></li>
+        </ul>
+
+        <p>Todos los Derechos Reservados 2022 &copy</p>
+    </div>
+
+    <script type="module" src="script.js"></script>
+</body>
+</html>
